@@ -15,6 +15,6 @@ const CarouselContainer = styled(Carousel)`
     width: 600px;
     margin: 0 auto;
     background-color: #4dd0e1;
-    padding: 50px;
+    padding: 50px 0;
     border-radius: 15px;
 `

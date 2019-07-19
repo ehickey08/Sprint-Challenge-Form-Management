@@ -62,7 +62,7 @@ export const FormikRegistrationForm = withFormik({
         password: Yup.string()
             .min(8, 'Password must be at least 8 characters')
             .required('Password is required')
-            .matches(/(?=.*[0-9])(?=.[!@#$%^&])/, 'Your password must have at least one number and at least one special character!'),
+            .matches(/(?=.*[0-9])(?=.*[!@#$%^&])/, 'Your password must have at least one number and at least one special character!'),
         confirm: Yup.string()
             .oneOf([Yup.ref('password'), null], "Passwords don't match!")
             .required('Password is required'),
