@@ -3,7 +3,7 @@ import {FormikRegistrationForm as Form} from './components/RegistrationForm'
 import './App.css';
 import {useLocalStorage} from './hooks/useLocalStorage'
 import {axiosWithAuth} from './util/axiosWithAuth'
-import Recipe from './components/Recipe'
+import Carousel from './components/Carousel'
 
 function App() {
     const [token, setToken] = useLocalStorage('token', '')
@@ -33,7 +33,7 @@ function App() {
     return (
         <div className="App">
             <Form getToken={getToken}/>
-            {data && data.map(recipe => <Recipe recipe={recipe} key={recipe.name}/>)}
+            {data.length>0 && <Carousel data={data} />}
         </div>
     );
 }
